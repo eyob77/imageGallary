@@ -1,0 +1,138 @@
+.container.containerFinalState{
+  animation: conatianerAnimation 1s ease .7s forwards;
+}
+@keyframes conatianerAnimation {
+
+  to{
+    width:500px;
+    height:40px;
+    left:82%;
+    top:92%;
+    transform: translateX(-50%);
+    gap:5px;
+  }
+}
+.container.containerInterMediate{
+  animation: conatianerAnimation2 1s linear .7s forwards;
+
+}
+@keyframes conatianerAnimation2 {
+  100%{
+    top:50%;
+    left:50%;
+    width:300vh;
+    height: 390px;
+    transform: translate(var(--target),-50%);
+    gap:20px;
+    /* calc(var(--target) * 0.5) */
+  }
+}
+
+.child.toLeft{
+  animation: toLeft .5s ease .6s  forwards ;
+}
+@keyframes toLeft {
+
+  100%{
+    top:0%;
+    transform: translateX(0%);
+    width:100%;
+    left:0%;
+  }
+}
+.box.toTop{
+  animation: toTop 1.3s ease forwards;
+}
+
+@keyframes toTop {
+  0%{
+    top:0%;
+  }
+  30%{
+    top:30%;
+  }
+  70%{
+    top:-80%;
+  }
+  100%{
+    top:0%
+  }
+}
+
+.bgs.expand{
+  clip-path: var(--clipPath);
+  animation: clipPath 3s ease .4s forwards;
+}
+/* .bgs.expand::after,.bgs.full::after{
+  opacity: 1;
+  transition:opacity 3s ease 2s ;
+} */
+@keyframes clipPath {
+  40%{
+    clip-path: polygon(12% 20%, 88% 20%, 88% 80%, 12% 80%);       
+  }
+  100%{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.child.Cover{
+  animation: CoverFull 2s ease .5s forwards;
+}
+
+@keyframes CoverFull {
+  100%{
+    top:0%;
+    left:0%;
+    width:100%;
+    height:100%;
+   }
+}
+
+
+@keyframes imageSacle {
+  100%{
+    transform: scale(1);
+  }
+}
+.ZoomOut{
+  animation: imageSacle 1.5s ease 2s forwards;
+}
+.rightClip{
+  clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+  transition: clip-path .8s cubic-bezier(0.11, 0, 0.5, 0).2s;
+}
+.leftClip{
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  transition: clip-path .8s cubic-bezier(0.11, 0, 0.5, 0) .2s;
+}
+.full{
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  transition: clip-path .8s cubic-bezier(0.11, 0, 0.5, 0) .2s;
+}
+
+.image{
+  transform: scale(1.2);
+  transition:transform .8s ease-in-out .2s;
+}
+.scale{
+  transform: scale(1);
+  transition:transform 1s ease-in-out .4s;
+}
+
+.replaced{
+  transform: translateY(0%);
+}
+.finale{
+  animation: finale 1.5s ease-in-out .4s forwards;
+}
+@keyframes finale {
+  0%{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  100%{
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+}
+
